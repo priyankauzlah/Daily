@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">NewsAppp</string>
+    <string name="image_view">Image View</string>
+    <string name="txt_login">Login</string>
+    <string name="txt_login_ins">Please sign in to continue</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="don_t_have_an_account">Don’t have an account ?</string>
+    <string name="forgot_password_">Forgot Password ?</string>
+    <string name="input_password">Please fill the input below here</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="create_instruction">Please fill the input below here</string>
+    <string name="create_account">Create Account</string>
+    <string name="back">back</string>
+    <string name="full_name">Full Name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="login">Login</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_in">Sign In</string>
+    <string name="register">Register</string>
+</resources>
