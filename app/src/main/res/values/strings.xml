@@ -16,9 +16,12 @@
     <string name="back">back</string>
     <string name="full_name">Full Name</string>
     <string name="confirm_password">Confirm Password</string>
-    <string name="sign_up">Sign Up</string>
-    <string name="login">Login</string>
-    <string name="sign_in">Sign In</string>
     <string name="sign_in">Sign In</string>
     <string name="register">Register</string>
+    <string name="_9_feb_2021">9, Feb 2021</string>
+    <string name="error_text">Please enter, its error</string>
+    <string name="error_pass">Password Miss Match</string>
+    <string name="text_user">Users</string>
+    <string name="error_register">Register Failed</string>
+    <string name="logout">Logout</string>
 </resources>
