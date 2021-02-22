@@ -72,10 +72,10 @@ class SignInActivity : AppCompatActivity(), View.OnClickListener {
                     Toast.makeText(this, "Login Failed", Toast.LENGTH_SHORT).show()
                 }
             }.addOnFailureListener {
-            val progress = ProgressDialog(this, R.style.Theme_AppCompat_Light_Dialog)
-            progress.hide()
+                val progress = ProgressDialog(this, R.style.Theme_AppCompat_Light_Dialog)
+                progress.hide()
                 Toast.makeText(this, "Login Failed", Toast.LENGTH_SHORT).show()
-        }
+            }
 
     }
 

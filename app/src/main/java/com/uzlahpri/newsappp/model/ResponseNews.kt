@@ -6,7 +6,7 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 data class ResponseNews(
 	val totalResults: Int? = null,
-	val articles: List<ArticlesItem?>? = null,
+	val articles: List<ArticlesItem>? = null,
 	val status: String? = null
 ) : Parcelable
 
@@ -25,5 +25,5 @@ data class ArticlesItem(
 @Parcelize
 data class Source(
 	val name: String? = null,
-	val id: Any? = null
+	val id: String? = null
 ) : Parcelable
