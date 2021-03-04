@@ -16,7 +16,7 @@
             android:layout_width="@dimen/_50dp"
             android:layout_height="@dimen/_50dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="@dimen/_20dp"
             android:src="@drawable/profile_person"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.002"
@@ -37,17 +37,16 @@
 
         <ImageButton
             android:id="@+id/ib_profile_main"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/_40dp"
+            android:layout_height="@dimen/_40dp"
             android:layout_marginEnd="16dp"
             android:background="@color/white"
             android:contentDescription="@string/image_view"
             app:layout_constraintBottom_toBottomOf="@+id/tv_date_main"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.949"
+            app:layout_constraintHorizontal_bias="0.938"
             app:layout_constraintStart_toEndOf="@+id/tv_date_main"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintTop_toTopOf="@+id/tv_date_main"
             app:srcCompat="@drawable/ic_outline_person_outline_24" />
 
         <androidx.cardview.widget.CardView
