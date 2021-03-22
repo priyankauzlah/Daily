@@ -15,7 +15,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/forgot_pass_illustration" />
+        app:srcCompat="@drawable/forgot_pass_illustration"
+        android:contentDescription="@string/image_view" />
 
     <ImageView
         android:id="@+id/iv_back_forgot"
@@ -28,7 +29,8 @@
         app:layout_constraintHorizontal_bias="0.031"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_arrow_back" />
+        app:srcCompat="@drawable/ic_arrow_back"
+        android:contentDescription="@string/image_view" />
 
     <TextView
         android:id="@+id/tv_title_forgot"
@@ -90,7 +92,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.867"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_arrow_forward" />
+        app:srcCompat="@drawable/ic_arrow_forward"
+        android:contentDescription="@string/floating_button"
+        android:focusable="true" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

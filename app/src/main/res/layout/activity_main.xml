@@ -44,9 +44,10 @@
             android:contentDescription="@string/image_view"
             app:layout_constraintBottom_toBottomOf="@+id/tv_date_main"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.938"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/tv_date_main"
             app:layout_constraintTop_toTopOf="@+id/tv_date_main"
+            app:layout_constraintVertical_bias="0.714"
             app:srcCompat="@drawable/ic_outline_person_outline_24" />
 
         <androidx.cardview.widget.CardView
@@ -154,28 +155,17 @@
             app:layout_constraintTop_toBottomOf="@id/card_main">
 
             <RelativeLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent">
-
-                <TextView
-                    android:id="@+id/tv_all"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_16dp"
-                    android:layout_marginTop="@dimen/_16dp"
-                    android:layout_marginEnd="@dimen/_16dp"
-                    android:layout_marginBottom="@dimen/_8dp"
-                    android:text="@string/all"
-                    android:textSize="@dimen/_18sp" />
 
                 <TextView
                     android:id="@+id/tv_international"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_16dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="16dp"
                     android:layout_marginTop="@dimen/_16dp"
                     android:layout_marginBottom="@dimen/_8dp"
-                    android:layout_toEndOf="@id/tv_all"
                     android:text="@string/international"
                     android:textSize="@dimen/_18sp" />
 
@@ -183,7 +173,7 @@
                     android:id="@+id/tv_media"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_16dp"
+                    android:layout_marginStart="13dp"
                     android:layout_marginTop="@dimen/_16dp"
                     android:layout_marginBottom="@dimen/_8dp"
                     android:layout_toEndOf="@id/tv_international"
@@ -211,6 +201,16 @@
                     android:layout_marginBottom="@dimen/_8dp"
                     android:layout_toEndOf="@id/tv_magazine"
                     android:text="@string/business"
+                    android:textSize="@dimen/_18sp" />
+
+                <TextView
+                    android:id="@+id/tv_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginTop="@dimen/_16dp"
+                    android:layout_toEndOf="@+id/tv_bussines"
+                    android:text="@string/all"
                     android:textSize="@dimen/_18sp" />
             </RelativeLayout>
 

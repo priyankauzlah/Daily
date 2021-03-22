@@ -8,20 +8,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
-
-        <!--    <Button-->
-        <!--        android:id="@+id/btn_logout"-->
-        <!--        android:layout_width="wrap_content"-->
-        <!--        android:layout_height="wrap_content"-->
-        <!--        android:text="@string/logout"-->
-        <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--        app:layout_constraintEnd_toEndOf="parent"-->
-        <!--        app:layout_constraintHorizontal_bias="0.977"-->
-        <!--        app:layout_constraintStart_toStartOf="parent"-->
-        <!--        app:layout_constraintTop_toTopOf="parent"-->
-        <!--        app:layout_constraintVertical_bias="0.976" />-->
+        android:layout_height="wrap_content">
 
         <ImageButton
             android:id="@+id/ib_back_profile"
@@ -51,7 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="15dp"
-            android:text="@string/nathania_salavi"
+            android:text="@string/bianca_drew"
             android:textColor="@color/black"
             android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -64,7 +51,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:text="@string/nathaniasalavi_gmail_com"
+            android:text="@string/biancadrew_gmail_com"
             android:textSize="@dimen/_20sp"
             app:layout_constraintBottom_toBottomOf="@+id/iv_profile"
             app:layout_constraintEnd_toEndOf="parent"
@@ -315,7 +302,8 @@
             app:layout_constraintBottom_toBottomOf="@+id/tv_bookmark"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/tv_bookmark"
-            app:srcCompat="@drawable/ic_foward" />
+            app:srcCompat="@drawable/ic_foward"
+            android:contentDescription="@string/image_button" />
 
         <TextView
             android:id="@+id/tv_settings"

@@ -14,8 +14,8 @@ import kotlinx.android.synthetic.main.activity_profile.*
 
 class ProfileActivity : AppCompatActivity(), View.OnClickListener {
 
-    var refUsers: DatabaseReference? = null
-    var firebaseUser: FirebaseUser? = null
+//    var refUsers: DatabaseReference? = null
+//    var firebaseUser: FirebaseUser? = null
 
     companion object {
         fun getLaunchService(from: Context) = Intent(from, ProfileActivity::class.java).apply {
@@ -28,27 +28,27 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_profile)
         supportActionBar?.hide()
         tv_logout.setOnClickListener(this)
-        firebaseUser = FirebaseAuth.getInstance().currentUser
-        refUsers = FirebaseDatabase.getInstance().reference.child(firebaseUser!!.uid)
+//        firebaseUser = FirebaseAuth.getInstance().currentUser
+//        refUsers = FirebaseDatabase.getInstance().reference.child(firebaseUser!!.uid)
 
-        refUsers!!.addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
-                for (p0 in snapshot.children) {
-                    val name = snapshot.child("fullName").value.toString()
-                    val email = snapshot.child("email").value.toString()
-                    val photo = snapshot.child("photo").value.toString()
-                    tv_name_profile.text = name
-                    tv_email_profile.text = email
-                    Glide.with(this@ProfileActivity).load(photo).into(iv_profile)
+//        refUsers!!.addValueEventListener(object : ValueEventListener {
+//            override fun onDataChange(snapshot: DataSnapshot) {
+//                for (p0 in snapshot.children) {
+//                    val name = snapshot.child("fullName").value.toString()
+//                    val email = snapshot.child("email").value.toString()
+//                    val photo = snapshot.child("photo").value.toString()
+//                    tv_name_profile.text = name
+//                    tv_email_profile.text = email
+//                    Glide.with(this@ProfileActivity).load(photo).into(iv_profile)
+//
+//                }
+//            }
 
-                }
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
-            }
-
-        })
+//            override fun onCancelled(error: DatabaseError) {
+//                TODO("Not yet implemented")
+//            }
+//
+//        })
     }
 
 

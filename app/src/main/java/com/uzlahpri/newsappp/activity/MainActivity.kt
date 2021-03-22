@@ -53,20 +53,22 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         tv_date_main.text = date.toString("dd/MM/yy")
         getNews()
 
-        firebaseUser = FirebaseAuth.getInstance().currentUser
-        refUsers = FirebaseDatabase.getInstance().getReference("Users").child(firebaseUser!!.uid)
-        refUsers!!.addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
-                for (p0 in snapshot.children) {
-                    val photo = snapshot.child("photo").value.toString()
-                    Glide.with(this@MainActivity).load(photo).into(iv_profile_main)
-                }
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
-            }
-        })
+//        //harusnya dihapus
+//        firebaseUser = FirebaseAuth.getInstance().currentUser
+//        refUsers = FirebaseDatabase.getInstance().getReference("Users").child(firebaseUser!!.uid)
+//        refUsers!!.addValueEventListener(object : ValueEventListener {
+//            override fun onDataChange(snapshot: DataSnapshot) {
+//                for (p0 in snapshot.children) {
+//                    val photo = snapshot.child("photo").value.toString()
+//                    Glide.with(this@MainActivity).load(photo).into(iv_profile_main)
+//                }
+//            }
+//
+//            override fun onCancelled(error: DatabaseError) {
+//                TODO("Not yet implemented")
+//            }
+//        })
+//        //sampe sini dihapus
     }
 
     private fun getNews() {
@@ -88,19 +90,28 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                             Toast.makeText(this@MainActivity, "Data Success !", Toast.LENGTH_SHORT)
                                 .show()
                             val newsData = response.body()?.articles
+                            val newsDatImage = response.body()!!
+                            Glide.with(this@MainActivity)
+                                .load(newsDatImage.articles?.component5()?.urlToImage).centerCrop()
+                                .into(iv_main_banner)
+                            tv_highlight.text =
+                                newsDatImage.articles?.component5()?.title.toString()
+                            tv_name_author.text =
+                                newsDatImage.articles?.component5()?.author.toString()
+
                             val newsAdapter = NewsAdapter(this@MainActivity, newsData)
                             rv_main.adapter = newsAdapter
                             rv_main.layoutManager = LinearLayoutManager(this@MainActivity)
 
-                            val dataHighlight = response.body()
-                            Glide.with(this@MainActivity)
-                                .load(dataHighlight?.articles?.component5()?.urlToImage)
-                                .centerCrop().into(iv_main_banner)
-
-                            tv_highlight.text = dataHighlight?.articles?.component5()?.title
-                            tv_name_author.text = dataHighlight?.articles?.component5()?.author
-                            tv_date_highlight.text =
-                                dataHighlight?.articles?.component5()?.publishedAt
+//                            val dataHighlight = response.body()
+//                            Glide.with(this@MainActivity)
+//                                .load(dataHighlight?.articles?.component5()?.urlToImage)
+//                                .centerCrop().into(iv_main_banner)
+//
+//                            tv_highlight.text = dataHighlight?.articles?.component5()?.title
+//                            tv_name_author.text = dataHighlight?.articles?.component5()?.author
+//                            tv_date_highlight.text =
+//                                dataHighlight?.articles?.component5()?.publishedAt
 
                         } else {
                             Toast.makeText(this@MainActivity, "Data Failed !", Toast.LENGTH_SHORT)

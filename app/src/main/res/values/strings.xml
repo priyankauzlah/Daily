@@ -47,4 +47,8 @@
     <string name="edit_account">Edit Account</string>
     <string name="language">Language</string>
     <string name="bookmark">Bookmark</string>
+    <string name="bianca_drew">Bianca Drew</string>
+    <string name="biancadrew_gmail_com">biancadrew@gmail.com</string>
+    <string name="image_button">image button</string>
+    <string name="already_have_an_account">Already have an account ?</string>
 </resources>
