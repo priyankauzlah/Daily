@@ -107,14 +107,14 @@
                     android:layout_marginStart="@dimen/_16dp"
                     android:layout_marginTop="@dimen/_8dp"
                     android:layout_marginEnd="@dimen/_16dp"
-                    android:src="@drawable/profile_nathania_salavi" />
+                    android:src="@drawable/ic_person" />
 
                 <TextView
                     android:id="@+id/tv_name_author"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/tv_highlight"
-                    android:layout_marginTop="@dimen/_16dp"
+                    android:layout_marginTop="@dimen/_15dp"
                     android:layout_toEndOf="@id/iv_author_main"
                     android:text="@string/nathania_salavi" />
 
@@ -125,7 +125,7 @@
                     android:layout_below="@id/tv_highlight"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginTop="@dimen/_16dp"
+                    android:layout_marginTop="@dimen/_15dp"
                     android:layout_marginEnd="@dimen/_16dp"
                     android:text="@string/_9_feb_2021" />
 
@@ -162,10 +162,10 @@
                     android:id="@+id/tv_international"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginStart="16dp"
+                    android:layout_marginStart="@dimen/_10dp"
                     android:layout_marginTop="@dimen/_16dp"
                     android:layout_marginBottom="@dimen/_8dp"
+                    android:layout_toEndOf="@+id/tv_all"
                     android:text="@string/international"
                     android:textSize="@dimen/_18sp" />
 
@@ -207,9 +207,9 @@
                     android:id="@+id/tv_all"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="11dp"
                     android:layout_marginTop="@dimen/_16dp"
-                    android:layout_toEndOf="@+id/tv_bussines"
+                    android:layout_marginStart="@dimen/_8dp"
+                    android:layout_marginEnd="1dp"
                     android:text="@string/all"
                     android:textSize="@dimen/_18sp" />
             </RelativeLayout>

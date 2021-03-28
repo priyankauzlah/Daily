@@ -28,6 +28,7 @@ class ProfileActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_profile)
         supportActionBar?.hide()
         tv_logout.setOnClickListener(this)
+        ib_back_profile.setOnClickListener(this)
 //        firebaseUser = FirebaseAuth.getInstance().currentUser
 //        refUsers = FirebaseDatabase.getInstance().reference.child(firebaseUser!!.uid)
 

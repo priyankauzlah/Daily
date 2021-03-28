@@ -103,15 +103,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                             rv_main.adapter = newsAdapter
                             rv_main.layoutManager = LinearLayoutManager(this@MainActivity)
 
-//                            val dataHighlight = response.body()
-//                            Glide.with(this@MainActivity)
-//                                .load(dataHighlight?.articles?.component5()?.urlToImage)
-//                                .centerCrop().into(iv_main_banner)
-//
-//                            tv_highlight.text = dataHighlight?.articles?.component5()?.title
-//                            tv_name_author.text = dataHighlight?.articles?.component5()?.author
-//                            tv_date_highlight.text =
-//                                dataHighlight?.articles?.component5()?.publishedAt
+                            val dataHighlight = response.body()
+                            Glide.with(this@MainActivity)
+                                .load(dataHighlight?.articles?.component5()?.urlToImage)
+                                .centerCrop().into(iv_main_banner)
+
+                            tv_highlight.text = dataHighlight?.articles?.component5()?.title
+                            tv_name_author.text = dataHighlight?.articles?.component5()?.author
+                            tv_date_highlight.text =
+                                dataHighlight?.articles?.component5()?.publishedAt
 
                         } else {
                             Toast.makeText(this@MainActivity, "Data Failed !", Toast.LENGTH_SHORT)
@@ -132,6 +132,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(p0: View) {
         when (p0.id) {
             R.id.ib_profile_main -> startActivity(Intent(ProfileActivity.getLaunchService(this)))
+            R.id.card_image -> Toast.makeText(this@MainActivity, "This is a Highlight !", Toast.LENGTH_SHORT).show()
         }
     }
 }
